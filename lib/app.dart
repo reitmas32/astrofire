@@ -9,7 +9,7 @@ class AstrofireApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return  MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: const HomePage(),
+      home: HomePage(),
       darkTheme: AstroTheme.dark,
       theme: AstroTheme.ligth,
       themeMode: ThemeMode.dark,
