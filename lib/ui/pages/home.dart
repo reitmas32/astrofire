@@ -1,25 +1,54 @@
+import 'package:astofire/ui/molecules/custom_appbar.dart';
+import 'package:astofire/ui/providers/scroll_controller.dart';
+import 'package:astofire/ui/views/home_body.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:scrollable_positioned_list/scrollable_positioned_list.dart';
 
-class HomePage extends StatelessWidget {
-  const HomePage({super.key});
+class HomePage extends ConsumerWidget {
+  HomePage({super.key});
+
+  final elements = [
+    const SizedBox(
+      height: 1000,
+      child: HomeBody(),
+    ),
+    const SizedBox(
+      height: 1000,
+      child: HomeBody(),
+    ),
+    const SizedBox(
+      height: 1000,
+      child: HomeBody(),
+    ),
+    const SizedBox(
+      height: 1000,
+      child: HomeBody(),
+    ),
+  ];
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
+    final scrollController = ref.watch(scrollControllerProvider);
     return Scaffold(
-      backgroundColor: Color.fromARGB(249, 46, 46, 46),
-
+      backgroundColor: const Color.fromARGB(249, 46, 46, 46),
+      
       body: Stack(
         children: [
           Container(
-            color: Color.fromARGB(100, 46, 46, 46),
+            color: const Color.fromARGB(248, 30, 30, 30),
             height: MediaQuery.of(context).size.height,
             width: MediaQuery.of(context).size.width,
+            child: ScrollablePositionedList.builder(
+              itemScrollController: scrollController,
+              shrinkWrap: true,
+              itemCount: elements.length,
+              itemBuilder: (BuildContext context, int index) {
+                return elements[index];
+              }, // Hace que el ListView interior se ajuste a su contenido
+            ),
           ),
-          Container(
-            color: Color.fromARGB(249, 46, 46, 46),
-            height: MediaQuery.of(context).size.height / 15,
-            width: MediaQuery.of(context).size.width,
-          )
+          const CustomAppBar()
         ],
       ),
     );
