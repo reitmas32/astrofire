@@ -57,19 +57,19 @@ class CustomAppBar extends StatelessWidget {
                   children: [
                     SectionButton(
                       lable: 'About',
-                      index: 0,
-                    ),
-                    SectionButton(
-                      lable: 'Project',
                       index: 1,
                     ),
                     SectionButton(
-                      lable: 'Team',
+                      lable: 'Project',
                       index: 2,
                     ),
                     SectionButton(
-                      lable: 'Contact',
+                      lable: 'Team',
                       index: 3,
+                    ),
+                    SectionButton(
+                      lable: 'Contact',
+                      index: 4,
                     ),
                   ],
                 ),
