@@ -1,6 +1,8 @@
 import 'package:astofire/ui/molecules/custom_appbar.dart';
+import 'package:astofire/ui/molecules/fotter.dart';
 import 'package:astofire/ui/providers/scroll_controller.dart';
 import 'package:astofire/ui/views/about.dart';
+import 'package:astofire/ui/views/contact.dart';
 import 'package:astofire/ui/views/home_body.dart';
 import 'package:astofire/ui/views/project.dart';
 import 'package:astofire/ui/views/team.dart';
@@ -26,8 +28,13 @@ class HomePage extends ConsumerWidget {
     ),
     const TeamView(),
     const SizedBox(
-      height: 500,
+      height: 300,
     ),
+    const ContactView(),
+    const SizedBox(
+      height: 250,
+    ),
+    const CustomFotter(),
   ];
 
   @override
