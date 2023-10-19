@@ -8,7 +8,7 @@ class AstroTheme {
       primary: Colors.black,
       onPrimary: Colors.white,
       secondary: Colors.black,
-      onSecondary: Colors.white,
+      onSecondary: Color.fromARGB(255, 242, 87, 3),
       error: Colors.red,
       onError: Colors.black,
       background: Colors.black,
@@ -18,7 +18,6 @@ class AstroTheme {
     ),
     appBarTheme: AppBarTheme(
       backgroundColor: Color.fromARGB(251, 32, 32, 32),
-      
     ),
   );
   static ThemeData ligth = ThemeData();
