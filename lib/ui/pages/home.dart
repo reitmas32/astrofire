@@ -1,6 +1,9 @@
 import 'package:astofire/ui/molecules/custom_appbar.dart';
 import 'package:astofire/ui/providers/scroll_controller.dart';
+import 'package:astofire/ui/views/about.dart';
 import 'package:astofire/ui/views/home_body.dart';
+import 'package:astofire/ui/views/project.dart';
+import 'package:astofire/ui/views/team.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:scrollable_positioned_list/scrollable_positioned_list.dart';
@@ -15,15 +18,15 @@ class HomePage extends ConsumerWidget {
     ),
     const SizedBox(
       height: 1000,
-      child: HomeBody(),
+      child: AboutView(),
     ),
+    const ProjectView(),
     const SizedBox(
-      height: 1000,
-      child: HomeBody(),
+      height: 100,
     ),
+    const TeamView(),
     const SizedBox(
-      height: 1000,
-      child: HomeBody(),
+      height: 500,
     ),
   ];
 
@@ -32,7 +35,6 @@ class HomePage extends ConsumerWidget {
     final scrollController = ref.watch(scrollControllerProvider);
     return Scaffold(
       backgroundColor: const Color.fromARGB(249, 46, 46, 46),
-      
       body: Stack(
         children: [
           Container(
