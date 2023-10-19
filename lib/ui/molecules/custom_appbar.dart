@@ -69,7 +69,7 @@ class CustomAppBar extends StatelessWidget {
                     ),
                     SectionButton(
                       lable: 'Contact',
-                      index: 4,
+                      index: 6,
                     ),
                   ],
                 ),
