@@ -39,7 +39,7 @@ The Community Aerial Fire Response project is an innovative, open-source solutio
     Person(
       name: 'RONI HERNANDEZ',
       picture:
-          'https://raw.githubusercontent.com/reitmas32/astrofire/main/assets/isac.png',
+          'https://raw.githubusercontent.com/reitmas32/astrofire/main/assets/roni.png',
       profesion: 'Ing. en Telecomunicaciones',
     ),
   ];

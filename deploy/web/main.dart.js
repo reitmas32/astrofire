@@ -86658,8 +86658,8 @@ s($,"aNK","axK",()=>A.aHo())
 s($,"aNe","db",()=>A.aB3(A.asG(A.a([1],t.t)).buffer).getInt8(0)===1?B.a1:B.kk)
 s($,"aR0","WN",()=>new A.Ym(A.C(t.N,A.ai("l4"))))
 r($,"aQk","am9",()=>B.yK)
-r($,"aO9","apQ",()=>{var q="https://raw.githubusercontent.com/reitmas32/astrofire/main/assets/isac.png",p="Ing. en Telecomunicaciones",o="Ing. en Computaci\xf3n"
-return A.a([A.yC("ISAC VALENCIA",q,p),A.yC("LISETTE HERNANDEZ","https://raw.githubusercontent.com/reitmas32/astrofire/main/assets/liss.png",o),A.yC("DAVID FARF\xc1N","https://raw.githubusercontent.com/reitmas32/astrofire/main/assets/farfi.png","Ing. Mecanico"),A.yC("RAFAEL ZAMORA","https://raw.githubusercontent.com/reitmas32/astrofire/main/assets/rafa.png",o),A.yC("ISRAEL MEJIA","https://raw.githubusercontent.com/reitmas32/astrofire/main/assets/isra.png",o),A.yC("RONI HERNANDEZ",q,p)],A.ai("v<Kg>"))})
+r($,"aO9","apQ",()=>{var q="Ing. en Telecomunicaciones",p="Ing. en Computaci\xf3n"
+return A.a([A.yC("ISAC VALENCIA","https://raw.githubusercontent.com/reitmas32/astrofire/main/assets/isac.png",q),A.yC("LISETTE HERNANDEZ","https://raw.githubusercontent.com/reitmas32/astrofire/main/assets/liss.png",p),A.yC("DAVID FARF\xc1N","https://raw.githubusercontent.com/reitmas32/astrofire/main/assets/farfi.png","Ing. Mecanico"),A.yC("RAFAEL ZAMORA","https://raw.githubusercontent.com/reitmas32/astrofire/main/assets/rafa.png",p),A.yC("ISRAEL MEJIA","https://raw.githubusercontent.com/reitmas32/astrofire/main/assets/isra.png",p),A.yC("RONI HERNANDEZ","https://raw.githubusercontent.com/reitmas32/astrofire/main/assets/roni.png",q)],A.ai("v<Kg>"))})
 s($,"aRn","aqm",()=>{var q=null
 A.apa()
 A.apa()
