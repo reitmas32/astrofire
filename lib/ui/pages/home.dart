@@ -31,7 +31,7 @@ class HomePage extends ConsumerWidget {
     const SizedBox(
       height: 300,
     ),
-    const ContactView(),
+    ContactView(),
     const SizedBox(
       height: 250,
     ),
