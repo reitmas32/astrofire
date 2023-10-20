@@ -9,14 +9,18 @@ class AboutView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final size = MediaQuery.of(context).size;
+
     return Center(
-      child: SizedBox(
+      child: Container(
         width: MediaQuery.of(context).size.height,
+        padding: EdgeInsets.symmetric(horizontal: size.width > 600 ? 80 : 30),
         child: Center(
           child: Text(
             StaticData.about,
+            textAlign: TextAlign.justify,
             style: GoogleFonts.outfit(
-              fontSize: 30,
+              fontSize: size.width > 600 ? 30 : 20,
             ),
           ),
         ),

@@ -8,6 +8,8 @@ class HomeBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final size = MediaQuery.of(context).size;
+
     return Center(
       child: SizedBox(
         width: MediaQuery.of(context).size.height,
@@ -28,7 +30,7 @@ class HomeBody extends StatelessWidget {
                 child: Text(
                   'COMMUNITY AERIAL FIRE RESPONSE',
                   style: GoogleFonts.outfit(
-                    fontSize: 80,
+                    fontSize: size.width > 600 ? 80 : 30,
                   ),
                   maxLines: 2,
                 ),

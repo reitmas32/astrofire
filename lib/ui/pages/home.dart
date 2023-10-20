@@ -3,6 +3,7 @@ import 'package:astofire/ui/molecules/fotter.dart';
 import 'package:astofire/ui/providers/scroll_controller.dart';
 import 'package:astofire/ui/views/about.dart';
 import 'package:astofire/ui/views/contact.dart';
+import 'package:astofire/ui/views/custom_drawer.dart';
 import 'package:astofire/ui/views/home_body.dart';
 import 'package:astofire/ui/views/project.dart';
 import 'package:astofire/ui/views/team.dart';
@@ -40,8 +41,10 @@ class HomePage extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final scrollController = ref.watch(scrollControllerProvider);
+    final size = MediaQuery.of(context).size;
     return Scaffold(
       backgroundColor: const Color.fromARGB(249, 46, 46, 46),
+      endDrawer: size.width < 1000 ? const CustomDrawer() : null,
       body: Stack(
         children: [
           Container(
