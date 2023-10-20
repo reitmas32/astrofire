@@ -27,6 +27,9 @@ class _SectionButtonState extends ConsumerState<SectionButton> {
     return MouseRegion(
       child: GestureDetector(
         onTap: () {
+          if(Scaffold.of(context).isEndDrawerOpen){
+            Navigator.pop(context);
+          }
           scrollController.scrollTo(
             index: widget.index,
             duration: Duration(milliseconds: 500),
