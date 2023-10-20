@@ -12,8 +12,28 @@ class ProjectView extends StatefulWidget {
 }
 
 class _ProjectViewState extends State<ProjectView> {
+  final List<Widget> dataResources = [
+    const ResourceWidget(
+      img:
+          'https://raw.githubusercontent.com/reitmas32/astrofire/main/assets/satelite.gif',
+      lable: 'NASA Satellite',
+    ),
+    const ResourceWidget(
+      img:
+          'https://raw.githubusercontent.com/reitmas32/astrofire/main/assets/blazer.gif',
+      lable: 'BLAZE Sensors',
+    ),
+    const ResourceWidget(
+      img:
+          'https://raw.githubusercontent.com/reitmas32/astrofire/main/assets/app_mobile.gif',
+      lable: 'APP Movile',
+    ),
+  ];
+
   @override
   Widget build(BuildContext context) {
+    final size = MediaQuery.of(context).size;
+
     return Container(
       width: MediaQuery.of(context).size.height,
       padding: const EdgeInsets.only(top: 25).add(
@@ -39,26 +59,17 @@ class _ProjectViewState extends State<ProjectView> {
                   fontSize: 45, fontWeight: FontWeight.bold),
             ),
           ),
-          const Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              ResourceWidget(
-                img:
-                    'https://raw.githubusercontent.com/reitmas32/astrofire/main/assets/satelite.gif',
-                lable: 'NASA Satellite',
+          size.width > 800
+              ? Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: dataResources,
+                )
+              : Center(
+                child: Wrap(
+                    alignment: WrapAlignment.center,
+                    children: dataResources,
+                  ),
               ),
-              ResourceWidget(
-                img:
-                    'https://raw.githubusercontent.com/reitmas32/astrofire/main/assets/blazer.gif',
-                lable: 'BLAZE Sensors',
-              ),
-              ResourceWidget(
-                img:
-                    'https://raw.githubusercontent.com/reitmas32/astrofire/main/assets/app_mobile.gif',
-                lable: 'APP Movile',
-              ),
-            ],
-          ),
           Padding(
             padding: const EdgeInsets.all(25.0),
             child: Text(
