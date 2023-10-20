@@ -9,6 +9,8 @@ class CustomAppBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final size = MediaQuery.of(context).size;
+
     return Container(
       color: const Color.fromARGB(248, 30, 30, 30),
       height: MediaQuery.of(context).size.height / 15,
@@ -22,10 +24,10 @@ class CustomAppBar extends StatelessWidget {
         ),
       ),
       child: Row(
-        //mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           SizedBox(
-            width: MediaQuery.of(context).size.width / 3,
+            width: size.width > 1000 ? MediaQuery.of(context).size.width / 3 : null,
             child: Row(
               children: [
                 Padding(
@@ -47,35 +49,53 @@ class CustomAppBar extends StatelessWidget {
               ],
             ),
           ),
-          Expanded(
-            // ignore: avoid_unnecessary_containers
-            child: Container(
-              child: const Padding(
-                padding: EdgeInsets.symmetric(horizontal: 100),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    SectionButton(
-                      lable: 'About',
-                      index: 1,
+          MediaQuery.of(context).size.width > 1000
+              ? Expanded(
+                  // ignore: avoid_unnecessary_containers
+                  child: Container(
+                    child: const Padding(
+                      padding: EdgeInsets.symmetric(horizontal: 100),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          SectionButton(
+                            lable: 'About',
+                            index: 1,
+                          ),
+                          SectionButton(
+                            lable: 'Project',
+                            index: 2,
+                          ),
+                          SectionButton(
+                            lable: 'Team',
+                            index: 3,
+                          ),
+                          SectionButton(
+                            lable: 'Contact',
+                            index: 6,
+                          ),
+                        ],
+                      ),
                     ),
-                    SectionButton(
-                      lable: 'Project',
-                      index: 2,
-                    ),
-                    SectionButton(
-                      lable: 'Team',
-                      index: 3,
-                    ),
-                    SectionButton(
-                      lable: 'Contact',
-                      index: 6,
-                    ),
-                  ],
+                  ),
+                )
+              : SizedBox(
+                  child: Row(
+                    children: [
+                      IconButton(
+                        onPressed: () {
+                          Scaffold.of(context).openEndDrawer();
+                        },
+                        icon: const Icon(
+                          Icons.menu,
+                        ),
+                      ),
+                      const SizedBox(
+                        width: 25,
+                      ),
+                    ],
+                  ),
                 ),
-              ),
-            ),
-          ),
         ],
       ),
     );
