@@ -1,6 +1,6 @@
 {
-    "name": "astofire",
-    "short_name": "astofire",
+    "name": "astrofire",
+    "short_name": "astrofire",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
